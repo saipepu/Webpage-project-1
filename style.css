@@ -9,6 +9,7 @@
     position:relative;
     height: 400%;
     width: 100vw;
+    min-width: 700px;
     transition: all 0.1s ease-in;
 }
 .home-page{
@@ -33,7 +34,7 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid white;
-    height: 10vh;
+    height: 20vh;
     padding: 1em 2em;
 }
 .logo{
@@ -63,7 +64,7 @@ li{
     font-size: 0.5em;
     width: 10%;
     text-align:center;
-    margin-right: 10%;
+    
     text-decoration-color: rgba(255, 255, 255,0.5);
 }
 .sign-in-button:hover{
@@ -82,7 +83,7 @@ li{
 }
 
 .type{
-    font-size: 4em;
+    font-size: 4rem;
     font-weight: bolder;
     padding:1rem;
 }
@@ -138,9 +139,10 @@ li{
     margin-bottom: 1em;
 }
 .button{
-    width: 80%;
+    width: 50%;
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-left: 30px;
 }
 .slider-button{
     cursor: pointer;
@@ -151,7 +153,7 @@ li{
 }
 .slider-dot{
     padding-right: 20px;
-    margin-left: 20px;
+    margin-left: 5vw;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -185,7 +187,7 @@ li{
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    display:none;
+display: none;
 }
 .bar{
     margin-bottom: 2px;
@@ -198,15 +200,36 @@ li{
 .menu:hover .bar{
     box-shadow: 0px 0px 3px 0px grey;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 360px){
+    .container{
+        min-width: 360px;
+        
+    }
     .logo{
         font-size: 3rem;
         font-weight: bolder;
+        padding-right: 50%;
+    }
+    .service-text{
+        font-size: 0.5rem;
+        font-weight: lighter;
+    }
+    .service-title{
+        font-size: 2rem;
+        font-weight: bolder
+    }
+    .slider-title{
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+    .slider-description{
+        font-size: 0.5rem;
+        font-weight: lighter;
     }
     .sign-in-button{
-        width: 30%;
+        width: fit-content;
         font-size:1em;
-        transform: translateX(-30%);
+        transform: translateX(-80%);
         transition: transform 500ms ease-in;
     }
     .nav{
@@ -220,21 +243,25 @@ li{
         width: 100%;
         align-items: center;
         justify-content: center;
-        line-height: 5em;
+        line-height: 3em;
     }
     li{
         font-size: 3em;
     }
     .menu{
+        transform: translateX(-30px);
         display:block;
+    }
+    .type{
+        font-size: 3rem;
     }
 }
 .nav-active{
     position:absolute;
     display:block;
     width: 100vw;
-    height: 100vh;
-    top: 10vh;
+    height: 80%;
+    top: 20vh;
     left: 0;
     background-color: rgba(0, 0, 0,0.8);
 }
